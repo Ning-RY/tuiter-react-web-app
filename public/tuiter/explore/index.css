@@ -1,108 +1,52 @@
-a {
-    text-decoration: none;
+.wd-tweet-btn {
+    width: 100%;
+    border-radius: 15px;
+    font-size: 16px;
 }
 
-.wd-tuiter-background {
-    background-color: black;
-    padding-left: 16px;
-    margin-top: 5px;
-}
-
-.wd-tuiter-gray-box {
+.wd-icon-search {
     position: relative;
-    width: 563px;
-    border-bottom: 7px solid rgb(47, 51, 54);
-}
-
-.wd-tuiter-search-box {
-    position: relative;
-    border-top: 1px solid rgb(47, 51, 54);
-    border-right: 1px solid rgb(47, 51, 54);
-    border-left: 1px solid rgb(47, 51, 54);
-    border-bottom: 1px solid rgb(47, 51, 54);
-    width: 561px;
-}
-
-.wd-tuiter-search-box .icon {
-    position: absolute;
+    margin-left: -15px;
     left: 30px;
-    top: 15px;
-    color: white;
-    background-color: rgb(47, 51, 54);
 }
 
-.wd-tuiter-search-bar {
-    padding-left: 40px;
-    margin-left: 16px;
-    margin-top: 5px;
-    border-radius: 30px;
-    border-color: black;
-    left: 20px;
-    height: 30px;
-    width: 435px;
+.wd-input-search-bar {
+    border-radius: 50px;
+    border: 1px solid lightgray;
+    margin-right: 15px;
+    padding: 5px 15px 5px 45px;
+}
+
+.wd-card-img-top {
+    padding: 0;
+}
+
+.wd-card-img-top-title {
     color: white;
-    background-color: rgb(47, 51, 54);
+    font-size: xx-large;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
 }
 
 ::placeholder {
+    color: gray;
+    font-weight: 400;
+}
+
+.wd-text-white {
     color: white;
 }
 
-.wd-tuiter-search-gear {
-    float: right;
-    color: rgb(29, 161, 242);
-    padding-top: 15px;
-    padding-right: 12px;
+.wd-text-gray {
+    color: gray;
 }
 
-.wd-tuiter-hyperlink-highlight {
-    display: inline-block;
-    padding: 16px 16px 13px;
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(29, 161, 242);
-    border-bottom: 3px solid rgb(29, 161, 242);
+.wd-img-col1 {
+    border-radius: 10px
 }
 
-.wd-tuiter-hyperlink-regular {
-    display: inline-block;
-    padding: 16px;
-    font-size: 15px;
-    font-weight: bold;
-    color: rgb(110, 118, 125);
-}
-
-.wd-tuiter-whiteText {
-    color: white;
-}
-
-.wd-tuiter-search-box .dot {
-    float: right;
-    color: darkgray;
-    padding-top: 10px;
-    padding-right: 16px;
-}
-
-.wd-tuiter-suggest-text {
-    padding: 10px 10px 10px 16px;
-    font-size: 13px;
-    color: rgb(110, 118, 125);
-}
-
-.wd-tuiter-roundPic {
-    border-radius: 15px;
-    float: right;
-    margin-right: 16px;
-}
-
-.wd-tuiter-pic-overflow {
-    overflow: auto;
-}
-
-.wd-tuiter-block-de {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 16px;
-    font-size: 13px;
-    color: rgb(110, 118, 125);
+.wd-text-col {
+    font-size: 14px;
 }
