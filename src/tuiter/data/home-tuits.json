@@ -2,7 +2,7 @@
   {
     "_id": "0",
     "topic": "Space",
-    "userName": "SpaceX",
+    "username": "SpaceX",
     "handle": "@spacex",
     "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
     "time": "2h",
@@ -16,7 +16,7 @@
   {
     "_id": "1",
     "topic": "Tesla",
-    "userName": "Tesla",
+    "username": "Tesla",
     "handle": "@tesla",
     "title": "Autopilot is an advanced driver assistance system",
     "time": "4d",
@@ -30,7 +30,7 @@
   {
     "_id": "2",
     "topic": "Space",
-    "userName": "SpaceX",
+    "username": "SpaceX",
     "handle": "@spacex",
     "title": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on its 6' bed",
     "time": "2h",
@@ -44,7 +44,7 @@
   {
     "_id": "3",
     "topic": "Boring Company",
-    "userName": "The Boring Company",
+    "username": "The Boring Company",
     "handle": "@boringcompany",
     "title": "The Boring Company",
     "time": "2h",

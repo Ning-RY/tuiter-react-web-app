@@ -1,18 +1,18 @@
 import React from "react";
 import TuitStatus from "./tuitStats";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "../reducers/home-tuits-reducer";
+import {deleteTuitThunk} from "../services/tuits-thunks";
 
 const TuitItem = (
     {
         tuit = {
             "_id": "0",
             "topic": "Space",
-            "userName": "SpaceX",
+            "username": "SpaceX",
             "handle": "@spacex",
             "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
             "time": "2h",
-            "image": "spacex.jpeg",
+            "image": "spaceXlogo.png",
             "liked": true,
             "replies": 123,
             "retuits": 432,
@@ -23,7 +23,7 @@ const TuitItem = (
 ) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
     return (
         <li key={tuit._id} className="list-group-item">
@@ -38,7 +38,7 @@ const TuitItem = (
                     <div className="d-flex justify-content-between ps-2">
                         <div>
                             <div>
-                                <span className="fw-bolder">{tuit.userName}</span>
+                                <span className="fw-bolder">{tuit.username}</span>
                                 <span className="ms-1 fa fa-circle-check fa-1x"></span>
                                 <span className="text-secondary">{' ' + tuit.handle}</span>
                                 <span className="text-secondary">{' · ' + tuit.time}</span>
@@ -52,12 +52,7 @@ const TuitItem = (
                     </div>
                     {/* delete tuit */}
 
-                    <TuitStatus status={{
-                        "liked": tuit.liked,
-                        "replies": tuit.replies,
-                        "retuits": tuit.retuits,
-                        "likes": tuit.likes
-                    }}/>
+                    <TuitStatus tuit={tuit}/>
                 </div>
             </div>
         </li>

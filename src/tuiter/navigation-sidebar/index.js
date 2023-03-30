@@ -29,7 +29,7 @@ const NavigationSidebar = () => {
                     </div>
                 </div>
             </Link>
-            <Link to="/tuiter/explore" className={`list-group-item ${active === 'explore' ? 'active' : ''}`}>
+            <a className={`list-group-item ${active === 'explore' ? 'active' : ''}`}>
                 <div className="row">
                     <div className="col-2">
                         <i className="fa-solid fa-hashtag me-2"/>
@@ -38,7 +38,7 @@ const NavigationSidebar = () => {
                         <span>Explore</span>
                     </div>
                 </div>
-            </Link>
+            </a>
             <Link to="/" className="list-group-item">
                 <div className="row">
                     <div className="col-2">

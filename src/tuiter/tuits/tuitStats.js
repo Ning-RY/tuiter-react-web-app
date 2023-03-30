@@ -1,42 +1,60 @@
 import React from "react";
+import {useDispatch} from "react-redux";
+import {updateTuitThunk} from "../services/tuits-thunks";
 
-const TuitStatus = (
-    {
-        status = {
-            "liked": false,
-            "replies": 0,
-            "retuits": 0,
-            "likes": 0
-        }
+const TuitStatus = ({tuit}) => {
+    const dispatch = useDispatch();
+    const updateTuitHandler = (tuit) => {
+        dispatch(updateTuitThunk(tuit));
     }
-) => {
     return (
         // status
         <div className="row ps-3 pe-3 mt-3">
             {/* comment */}
             <div className="col">
                 <i className="fa-regular fa-comment" style={{"color": "gray"}}/>
-                <span className="text-secondary ms-2">{status.replies}</span>
+                <span className="text-secondary ms-1">{tuit.replies}</span>
 
             </div>
 
             {/* retweet */}
             <div className="col">
                 <i className="fa-solid fa-retweet" style={{"color": "gray"}}/>
-                <span className="text-secondary ms-2">{status.retuits}</span>
+                <span className="text-secondary ms-1">{tuit.retuits}</span>
 
             </div>
 
-            {/* heart */}
+            {/* likes */}
             <div className="col">
-                <i className="fa-solid fa-heart" style={{"color": status.liked ? "red" : "gray"}}/>
-                <span className="text-secondary ms-2">{status.likes}</span>
+                <i className="fa-solid fa-heart text-danger"
+                   onClick={() => updateTuitHandler(
+                       {
+                           ...tuit,
+                           likes: tuit.likes + 1
+                       })
+                   }
+                />
+                <span className="text-secondary ms-1">{tuit.likes}</span>
 
             </div>
 
-            {/* upload */}
+            {/* dislikes */}
             <div className="col">
-                <i className="fa-solid fa-arrow-up-from-bracket" style={{"color": "grey"}}/>
+                <i className="fa-solid fa-thumbs-down" style={{"color": "grey"}}
+                   onClick={() => updateTuitHandler(
+                       {
+                           ...tuit,
+                           dislikes: tuit.dislikes + 1
+                       })
+                   }
+                />
+                <span className="text-secondary ms-1">{tuit.dislikes}</span>
+
+            </div>
+
+            {/* share */}
+            <div className="col">
+                <i className="fa-solid fa-share-alt" style={{"color": "grey"}}/>
             </div>
         </div>
     );
